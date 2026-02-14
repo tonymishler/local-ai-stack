@@ -80,14 +80,14 @@ Break-even: 5-7 weeks
 ## Adding More Models
 
 ```bash
-# Larger LLM for more complex tasks
-ollama pull llama3:70b
-
 # Vision model for image analysis
-ollama pull llava:13b
+ollama pull llava:7b
 
 # Code-focused model
-ollama pull codellama:34b
+ollama pull codellama:7b
+
+# Smaller, faster model for quick tasks
+ollama pull phi3:mini
 ```
 
 ## Troubleshooting
@@ -100,7 +100,7 @@ kill -9 <PID>  # Kill it
 
 **Models running slow:**
 - Close other applications to free RAM
-- Use smaller model variants (8b instead of 70b)
+- Use smaller model variants (7b or mini)
 - Check Activity Monitor for memory pressure
 
 ## License
