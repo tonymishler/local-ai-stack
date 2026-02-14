@@ -20,13 +20,13 @@ Run your own AI services locally. Stop paying per-API-call rates for routine wor
 ## Quick Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourusername/local-ai-stack/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/tonymishler/local-ai-stack/main/install.sh | bash
 ```
 
 ## Manual Install
 
 ```bash
-git clone https://github.com/yourusername/local-ai-stack.git
+git clone https://github.com/tonymishler/local-ai-stack.git
 cd local-ai-stack
 chmod +x install.sh
 ./install.sh
