@@ -40,10 +40,16 @@ echo "  • faster-whisper (speech-to-text)"
 echo "  • Piper TTS (text-to-speech)"
 echo "  • EasyOCR (document processing)"
 echo ""
-read -p "Continue? [y/N] " -n 1 -r
-echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    exit 0
+
+# Skip prompt if piped (curl | bash) - detect by checking if stdin is a terminal
+if [ -t 0 ]; then
+    read -p "Continue? [y/N] " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        exit 0
+    fi
+else
+    echo "Running in non-interactive mode (piped install)..."
 fi
 
 # Install Homebrew if needed
