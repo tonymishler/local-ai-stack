@@ -66,7 +66,8 @@ brew install python@3.11 ffmpeg portaudio
 # Install Ollama
 echo -e "${BLUE}Installing Ollama...${NC}"
 if ! command -v ollama &> /dev/null; then
-    curl -fsSL https://ollama.com/install.sh | sh
+    # Use </dev/null to prevent ollama installer from consuming our stdin
+    curl -fsSL https://ollama.com/install.sh | sh </dev/null
 fi
 
 # Start Ollama and pull a model
